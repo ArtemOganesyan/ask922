@@ -1,2 +1,4 @@
-package Definitions;public class ryabchikovaDefinitions {
+package Definitions;
+
+public class ryabchikovaDefinitions {
 }
