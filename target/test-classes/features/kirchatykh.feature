@@ -31,3 +31,4 @@ Feature: Quiz Title
 
   Scenario: Leading and trailing space characters to be eliminate
     And I create quiz title with leading and trailing spaces as " QWERTY "
+
