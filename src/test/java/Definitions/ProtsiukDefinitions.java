@@ -60,12 +60,12 @@ public class ProtsiukDefinitions {
         String password2 = "";
         switch (pass){
             case "old":
-                password1= ProtsiukCredentials.teacherPassword;
-                password2 = ProtsiukCredentials.teacherNewPassword;
+                password1 = ProtsiukCredentials.teacherNewPassword;
+                password2= ProtsiukCredentials.teacherPassword;
                 break;
             case "new":
-                password1 = ProtsiukCredentials.teacherNewPassword;
-                password2 = ProtsiukCredentials.teacherPassword;
+                password1 = ProtsiukCredentials.teacherPassword;
+                password2 = ProtsiukCredentials.teacherNewPassword;
                 break;
 
             default:
