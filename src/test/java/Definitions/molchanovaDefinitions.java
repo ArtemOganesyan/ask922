@@ -2,8 +2,8 @@ package Definitions;
 
 import cucumber.api.java.en.Given;
 
-public class JavaStepDefs2 {
+public class molchanovaDefinitions {
     @Given("I print Hello World!")
     public void iPrintHelloWorld() {
-        System.out.println("Hello World!");
     }
+}
