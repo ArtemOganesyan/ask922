@@ -1,5 +1,8 @@
 @git
   Feature: Learning Git
 
-    @git1
-    Scenario: Test1
+    @java1
+    Scenario Outline: Hello World
+      Given I print Hello World!
+      Examples:
+
