@@ -10,5 +10,8 @@
         <module name="java-webdriver-cucumber" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ask922" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
