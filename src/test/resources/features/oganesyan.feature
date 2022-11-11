@@ -1,1 +1,6 @@
-# This is new feature file for Artem
+@oganesyan_feature
+  Feature: Oganesyan feature
+
+    @oganesyan_test1
+    Scenario: Oganesyan test scenario
+      Given OAV open url ""
