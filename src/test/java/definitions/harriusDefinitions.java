@@ -25,6 +25,8 @@ public class harriusDefinitions {
             case "Password":
                 getDriver().findElement(By.xpath(HarriusLib.passwordX)).sendKeys(HarriusLib.passwordV);
                 break;
+            default:
+                System.out.println("Check string text field");
         }
     }
 
@@ -37,6 +39,8 @@ public class harriusDefinitions {
             case "My Assignments":
                 getDriver().findElement(By.xpath(HarriusLib.myAssignmentsButtonX)).click();
                 break;
+            default:
+                System.out.println("Check string for button");
         }
     }
 
@@ -50,6 +54,8 @@ public class harriusDefinitions {
                 new WebDriverWait(getDriver(), 10, 200).until(ExpectedConditions.presenceOfElementLocated(By.xpath(HarriusLib.myAssignmentsH4X)));
                 Thread.sleep(1000);
                 break;
+            default:
+                System.out.println("Check data");
         }
     }
 
@@ -61,6 +67,8 @@ public class harriusDefinitions {
             assertThat(actualText).containsIgnoringCase(HarriusLib.myAssignmentsH4V);
             Thread.sleep(1000);
             break;
+            default:
+                System.out.println("Check string value");
         }
     }
 }
