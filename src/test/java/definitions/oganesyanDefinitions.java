@@ -13,4 +13,7 @@ public class oganesyanDefinitions {
     public void oavOpenUrl(String arg0) {
         getDriver().get("https://google.com");
     }
-}
+
+    }
+
+
