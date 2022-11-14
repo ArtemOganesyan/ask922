@@ -1,4 +1,4 @@
-package Definitions;
+package DDDDefinitions;
 
 import cucumber.api.java.en.Given;
 import org.openqa.selenium.By;
