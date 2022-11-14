@@ -2,7 +2,6 @@ Feature: Quiz Title
 
 #  Title of Quiz:
 #
-#  Allowable characters: Alphanumeric & Sp. characters
 #  The field is required
 #  Min 1 Characters
 #  Max 1000 characters
