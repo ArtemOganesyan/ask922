@@ -9,7 +9,7 @@ import support.trafimuk_xpathlib;
 
 import static support.TestContext.getDriver;
 
-public class trafimukDefinitions {
+public class  trafimukDefinitions {
     @Given("I navigate to the login page")
     public void iNavigateToTheLoginPage() {
         getDriver().get(trafimuk_xpathlib.url);
