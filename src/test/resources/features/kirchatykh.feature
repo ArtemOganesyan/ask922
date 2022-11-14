@@ -1,5 +1,5 @@
 @kirchatykh_feature
-Feature: Quiz Title
+Feature: KAV Quiz Title
 
 #  Title of Quiz:
 #
