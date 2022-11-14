@@ -33,10 +33,3 @@ Feature: Teacher: Setting password
 
 
 
-
-
-
-
-
-
-

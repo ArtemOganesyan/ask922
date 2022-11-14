@@ -3,7 +3,7 @@ Feature: Multiple Choice Question - Text
 
   Background: Test background
     Given I navigate to the login page
-    Then I fill out "Email" text field
+    Then I fill out " Email" text field
     Then I fill out "Password" text field
     And I click "Sign In" button
     Then I select "Quizzes" from navigation menu
