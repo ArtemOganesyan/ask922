@@ -1,3 +1,4 @@
+@kirchatykh_feature
 Feature: Quiz Title
 
 #  Title of Quiz:
@@ -7,26 +8,33 @@ Feature: Quiz Title
 #  Max 1000 characters
 #  Leading and trailing space characters to be eliminate when Quiz is saved in the List of Quizzes
 
-  Background: Create New Quiz
-    Given I create new quiz "qa.10000@yahoo.com" "test2022"
+  Background: KAV Create New Quiz
+    Given KAV creates new quiz "qa.10000@yahoo.com" "test2022"
 
-  Scenario: Alpha-numeric data
-    And I write "1234%&QWERTYqwerty_" into quiz_title positive
+  @kirchatykh_scenario_1
+  Scenario: KAV Quiz Title accepts Alpha-numeric data
+    And KAV types in "1234%&QWERTYqwerty_" into quiz_title positive
 
-  Scenario: Required field
-    And I write blank quizz title
+  @kirchatykh_scenario_2
+  Scenario: KAV Quiz Title as Required field
+    And KAV leaves quiz_title as blank
 
-  Scenario: Quiz title accepts 1 character
-    And I write "q" into quiz_title positive
+  @kirchatykh_scenario_3
+  Scenario: KAV Quiz Title accepts 1 character
+    And KAV types in "q" into quiz_title positive
 
-  Scenario: Quiz title accepts 1000 characters
-    And I generate 1000 "q" into quiz_title positive
+  @kirchatykh_scenario_4
+  Scenario: KAV Quiz Title accepts 1000 characters
+    And KAV types in 1000 characters into quiz_title positive
 
-  Scenario: Quiz title accepts 10 character
-    And I write "qaqaqaqaqa" into quiz_title positive
+  @kirchatykh_scenario_5
+  Scenario: KAV Quiz Title accepts 10 character
+    And KAV types in "qaqaqaqaqa" into quiz_title positive
 
-  Scenario: Quiz title doesn't accept 1001 characters
-    And I generate 1001 "q" into quiz_title negative
+  @kirchatykh_scenario_6
+  Scenario: KAV Quiz Title doesn't accept 1001 characters
+    And KAV types in 1000 characters into quiz_title negative
 
-  Scenario: Leading and trailing space characters to be eliminate
-    And I create quiz title with leading and trailing spaces as " QWERTY "
+  @kirchatykh_scenario_7
+  Scenario: KAV Quiz Title Leading and trailing space characters to be eliminated
+    And KAV creates quiz_title with leading and trailing spaces as " QWERTY "

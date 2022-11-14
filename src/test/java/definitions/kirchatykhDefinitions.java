@@ -13,7 +13,7 @@ import static support.TestContext.getDriver;
 
 public class kirchatykhDefinitions {
 
-    @Given("I create new quiz {string} {string}")
+    @Given("KAV creates new quiz {string} {string}")
     public void iCreateNewQuiz(String login, String psswd) throws InterruptedException {
         getDriver().get("http://ask-stage.portnov.com");
 
@@ -38,7 +38,7 @@ public class kirchatykhDefinitions {
         new WebDriverWait(getDriver(), 10, 200).until(ExpectedConditions.presenceOfElementLocated(By.xpath(kirchatykhXpathLib.quizTitle)));
     }
 
-    @And("I write {string} into quiz_title positive")
+    @And("KAV types in {string} into quiz_title positive")
     public void iWriteIntoQuiz_titlePositive(String title) {
         getDriver().findElement(By.xpath(kirchatykhXpathLib.quizTitle)).sendKeys(title);
         getDriver().findElement(By.xpath(kirchatykhXpathLib.role)).click();
@@ -47,7 +47,7 @@ public class kirchatykhDefinitions {
         assertThat(getDriver().findElements(By.xpath(kirchatykhXpathLib.previewButton))).hasSize(1);
     }
 
-    @And("I write blank quizz title")
+    @And("KAV leaves quiz_title as blank")
     public void iWriteBlankQuizzTitle() {
         getDriver().findElement(By.xpath(kirchatykhXpathLib.quizTitle)).click();
         getDriver().findElement(By.xpath(kirchatykhXpathLib.role)).click();
@@ -55,10 +55,11 @@ public class kirchatykhDefinitions {
         assertThat(getDriver().findElements(By.xpath(kirchatykhXpathLib.addQuestionButton))).hasSize(0);
     }
 
-    @And("I generate 1000 {string} into quiz_title positive")
-    public void iGenerateIntoQuiz_titlePositive(String ch) throws InterruptedException {
+    @And("KAV types in 1000 characters into quiz_title positive")
+    public void iGenerateIntoQuiz_titlePositive() throws InterruptedException {
+        String generator = "q";
         String title = "";
-        for (int i =0; i<1000; i++) title += ch;
+        for (int i =0; i<1000; i++) title += generator;
         getDriver().findElement(By.xpath(kirchatykhXpathLib.quizTitle)).sendKeys(title);
         getDriver().findElement(By.xpath(kirchatykhXpathLib.role)).click();
         assertThat(getDriver().findElements(By.xpath(kirchatykhXpathLib.addQuestionButton))).hasSize(1);
@@ -67,17 +68,18 @@ public class kirchatykhDefinitions {
         assertThat(getDriver().findElements(By.xpath(kirchatykhXpathLib.lengthError))).hasSize(0);
     }
 
-    @And("I generate 1001 {string} into quiz_title negative")
-    public void iGenerateIntoQuiz_titleNegative(String ch) {
+    @And("KAV types in 1000 characters into quiz_title negative")
+    public void iGenerateIntoQuiz_titleNegative() {
+        String generator = "q";
         String title = "";
-        for (int i =0; i<1001; i++) title += ch;
+        for (int i =0; i<1001; i++) title += generator;
         getDriver().findElement(By.xpath(kirchatykhXpathLib.quizTitle)).sendKeys(title);
         getDriver().findElement(By.xpath(kirchatykhXpathLib.role)).click();
         assertThat(getDriver().findElements(By.xpath(kirchatykhXpathLib.addQuestionButton))).hasSize(0);
         assertThat(getDriver().findElements(By.xpath(kirchatykhXpathLib.lengthError))).hasSize(1);
     }
 
-    @And("I create quiz title with leading and trailing spaces as {string}")
+    @And("KAV creates quiz_title with leading and trailing spaces as {string}")
     public void iCreateQuizTitleWithLeadingAndTrailingSpacesAs(String title) {
         getDriver().findElement(By.xpath(kirchatykhXpathLib.quizTitle)).sendKeys(title);
         getDriver().findElement(By.xpath(kirchatykhXpathLib.role)).click();
