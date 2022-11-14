@@ -11,7 +11,7 @@ import support.ProtsiukXpathLib;
 import static java.lang.Thread.sleep;
 import static support.TestContext.getDriver;
 
-public class ProtsiukDefinitions {
+public class protsiukDefinitions {
     @Given("I login as \"([^\"]*)\" 'teacher' or 'student' or 'newPasswordTeacher'$")
     public void login(String asWho) throws InterruptedException {
         String login = "";
