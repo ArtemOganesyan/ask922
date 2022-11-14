@@ -229,11 +229,4 @@ public class thomasDorai_definitions
         getDriver().findElement(By.xpath("//ac-quiz-passing-percentage[1]/mat-card[1]/h5[contains(text(),'2 of 3 Points')]")).isDisplayed();
         Thread.sleep(5000);
     }
-
-    public static class calabinDefinitions {
-        @Given("VVC opens url {string}")
-        public void vvcOpensUrl(String arg0) {
-            getDriver().get("https://google.com");
-        }
-    }
 }
