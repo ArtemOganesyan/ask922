@@ -229,5 +229,4 @@ public class thomasDorai_definitions
         getDriver().findElement(By.xpath("//ac-quiz-passing-percentage[1]/mat-card[1]/h5[contains(text(),'2 of 3 Points')]")).isDisplayed();
         Thread.sleep(5000);
     }
-
 }
