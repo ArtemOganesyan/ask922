@@ -1,7 +1,5 @@
 package definitions;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import cucumber.api.java.en.*;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -249,6 +247,25 @@ public class moezziDefinitions {
         } else {
             System.out.println("role is not correct");
         }
+    }
+
+
+    @Given("I navigate to url")
+    public void iNavigateToUrl() {
+        getDriver().get("http://ask-stage.portnov.com/#/registration");
+
+    }
+
+    @And("I fill out all required field")
+    public void iFillOutAllRequiredField() throws InterruptedException {
+        getDriver().findElement(By.xpath("//input[@formcontrolname='firstName']")).sendKeys("Red");
+        getDriver().findElement(By.xpath("//input[@formcontrolname='lastName']")).sendKeys("Book");
+        getDriver().findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys("abcd@gmail.com");
+        getDriver().findElement(By.xpath("//input[@formcontrolname='group']")).sendKeys("ABC");
+        getDriver().findElement(By.xpath("//input[@formcontrolname='password']")).sendKeys("123456");
+        getDriver().findElement(By.xpath("//input[@formcontrolname='confirmPassword']")).sendKeys("123456");
+        getDriver().findElement(By.xpath("//button[@type='submit']")).click();
+        Thread.sleep(5000);
     }
 }
 
