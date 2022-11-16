@@ -18,7 +18,7 @@ Feature: MK My test set with step definitions. Submission - reviewed
     Then MK wait for 5 sec
     Then MK navigate to the Teacher comment field and clear existing comment
     Then MK wait for 2 sec
-#      Then I refresh the page
+
 #      Then I wait for 2 sec
 #      Then I go to Submissions - Reviewed
 #      Then I find MK test submission and click on Review button
