@@ -176,7 +176,7 @@ public class protsiukDefinitions {
 
         WebElement w = getDriver().findElement(By.xpath(ProtsiukXpathLib.changingPasswordConfirmationButton_xpathLib));
         boolean actual = w.isEnabled();
-//        isClickable(w);
+        isClickable(w);
 
         if (actual) {
             System.out.println("Clickable");
