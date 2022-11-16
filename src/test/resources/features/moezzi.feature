@@ -7,7 +7,7 @@
              Then I type "abc@yahoo.com" into element with xpath "//input[@formcontrolname='email']"
              Then I type "111111" into element with xpath "//input[@formcontrolname='password']"
              And I click on element with xpath "//*[contains(text(), 'Sign In')]"
-             Then I wait for 3 sec
+             Then I wait for 5 sec
              Then I click on element with xpath "//h5[contains(text(),'Settings')]"
              Then I wait for 3 sec
              Then I click on element with xpath "//span[contains(text(),'Change Your Name')]"

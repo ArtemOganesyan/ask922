@@ -15,7 +15,7 @@ import cucumber.api.java.en.Given;
 public class moezziDefinitions {
     @Given("I open url {string}")
     public void iOpenUrl(String arg0) {
-
+getDriver().get(arg0);
     }
 
     @Then("^I resize window to (\\d+) and (\\d+)$")
