@@ -5,34 +5,71 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import support.trafimuk_xpathlib;
+import support.ryabchikovaXpathLib;
 
 import static support.TestContext.getDriver;
 
 public class ryabchikovaDefinitions {
-    @Given("I open url {string}")
-    public void iOpenUrl(String string) throws InterruptedException {
+
+    @Given("ER navigate to log in page")
+    public void erNavigateToLogInPage() throws InterruptedException {
         getDriver().get("http://ask-stage.portnov.com");
+        Thread.sleep(3000);
     }
 
-    @Then("I fill out {string} textfield")
-    public void iFillOutTextfield(String textfield) throws InterruptedException {
-        getDriver().findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys("evgeniya.ryabchikova@icloud.com");
-        getDriver().findElement(By.xpath("//input[@formcontrolname='password']")).sendKeys("ear053185");
-
+    @Then("ER fill out {string} textfield")
+    public void erFillOutTextfield(String textField) {
+        switch (textField) {
+            case "Email":
+                getDriver().findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys("genyarr2@gmail.com");
+                break;
+            case "Password":
+                getDriver().findElement(By.xpath("//input[@formcontrolname='password']")).sendKeys("genyarr2!");
+                break;
+            default:
+                System.out.println("Please, check your code");
+        }
     }
 
-    @And("I click on {string} button")
-    public void iClickOnButton(String arg0) {
-        
+    @And("ER click on {string} button")
+    public void erClickOnButton(String button) {
+        switch (button) {
+            case "Sign In":
+                getDriver().findElement(By.xpath(ryabchikovaXpathLib.signInButton)).click();
+                break;
+            case "Create New Assignment":
+                getDriver().findElement(By.xpath(ryabchikovaXpathLib.createAssignment)).click();
+                break;
+            case "Give Assignment":
+                getDriver().findElement(By.xpath(ryabchikovaXpathLib.giveAssignment)).click();
+                break;
+
+        }
     }
 
-    @Then("I click on {string} from navigation menu")
-    public void iClickOnFromNavigationMenu(String arg0) {
-        
+    @Then("ER click on {string} textfield")
+    public void erClickOnTextfield(String textfield) {
+        switch (textfield) {
+            case "Group Filter":
+                getDriver().findElement(By.xpath(ryabchikovaXpathLib.groupFilter)).click();
+                break;
+            case "A":
+                getDriver().findElement(By.xpath(ryabchikovaXpathLib.a)).click();
+                break;
+            case "Select Quiz to Assign Textfield":
+                getDriver().findElement(By.xpath(ryabchikovaXpathLib.selectQuiztoAssign)).click();
+                break;
+            case "QA2 cxx":
+                getDriver().findElement(By.xpath(ryabchikovaXpathLib.QA2cxx)).click();
+                break;
+            case "Eva R":
+                getDriver().findElement(By.xpath(ryabchikovaXpathLib.evaR)).click();
+        }
     }
 
-    @Then("I click on {string} textfield")
-    public void iClickOnTextfield(String arg0) {
+    @Then("ER click on {string} from navigation menu")
+    public void erClickOnFromNavigationMenu(String navigationMenu) {
+        getDriver().findElement(By.xpath(ryabchikovaXpathLib.assignments)).click();
     }
 }
+
