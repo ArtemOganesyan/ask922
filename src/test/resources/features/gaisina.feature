@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+# @ gaisina new feature
+=======
 @ gaisina new feature
 Feature: GLB Single choice quiz text field
   Background:
@@ -41,3 +44,4 @@ Feature: GLB Single choice quiz text field
     Then GLB click on element with xpath "(//*[contains(text(),'Q1')]/../../..//mat-radio-button)[1]"
     Then GLB wait for 3 sec
     And GLB click on element with xpath "//span[contains(text(),'Save’)]"
+>>>>>>> main
