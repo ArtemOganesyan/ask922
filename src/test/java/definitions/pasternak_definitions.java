@@ -25,7 +25,7 @@ public class pasternak_definitions {
         Thread.sleep(3000);
     }
 
-    @Then("the PVZ role should be displayed")
+    @Then("PVZ role should be displayed")
     public void theUserRoleShouldBeDisplayed() {
         WebElement roleLabel = getDriver().findElement(By.xpath("//div[@class='info']//p"));
         System.out.println(roleLabel.getText());
@@ -58,5 +58,12 @@ public class pasternak_definitions {
         Thread.sleep(sec * 1000);
     }
 
+    @Then("PVZ with changed password login to the app")
+    public void pvzLoginToTheAppWithChangedPassword() throws InterruptedException {
+        getDriver().findElement(By.xpath(pasternak_xpathlib.emailXpath)).sendKeys("thedore@dinomail.ga");
+        getDriver().findElement(By.xpath(pasternak_xpathlib.passwordXpath)).sendKeys("Lviv1");
+        getDriver().findElement(By.xpath(pasternak_xpathlib.signInXpath)).click();
+        Thread.sleep(3000);
+    }
 }
 
