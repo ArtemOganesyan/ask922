@@ -1,6 +1,18 @@
 @trafimuk_feature1
 Feature: NT test set for Multiple Choice Question - Text
 
+<<<<<<< HEAD
+  Background: Test background
+    Given I navigate to the login page
+    Then I fill out " Email" text field
+    Then I fill out "Password" text field
+    And I click "Sign In" button
+    Then I select "Quizzes" from navigation menu
+    Then I click "Create New Quiz" button
+    And I fill out "Quiz Title" text field
+    Then I click "Add Question" button
+    Then I select MC question type
+=======
   Background: NT test background
     Given NT navigate to the login page
     Then NT fill out "Email" text field
@@ -11,6 +23,7 @@ Feature: NT test set for Multiple Choice Question - Text
     And NT fill out "Quiz Title" text field
     Then NT click "Add Question" button
     Then NT select MC question type
+>>>>>>> main
 
   @trafimuk_scenario1
   Scenario: NT Verify that "question" text field allows alphanumeric and special characters
