@@ -9,10 +9,17 @@ import support.trafimukXpathLib;
 
 import static support.TestContext.getDriver;
 
-public class trafimukDefinitions {
-    @Given("NT navigate to the login page")
-    public void ntNavigateToTheLoginPage() {
-        getDriver().get(trafimukXpathLib.url);
+// <<<<<<< protsiuk
+// public class  trafimukDefinitions {
+//     @Given("I navigate to the login page")
+//     public void iNavigateToTheLoginPage() {
+//         getDriver().get(trafimuk_xpathlib.url);
+// =======
+// public class trafimukDefinitions {
+//     @Given("NT navigate to the login page")
+//     public void ntNavigateToTheLoginPage() {
+//         getDriver().get(trafimukXpathLib.url);
+// >>>>>>> main
     }
 
     @Then("NT fill out {string} text field")
