@@ -10,7 +10,7 @@ import support.thomasDorai_XpathLib;
 
 import static support.TestContext.getDriver;
 
-public class thomasDorai_definitions
+public class thomasDoraiDefinitions
 {
 
     public void iMoveSliderToLeft()
@@ -50,15 +50,15 @@ public class thomasDorai_definitions
     }
 
 
-    @Given("I open registration url")
-    public void iOpenRegistrationUrl() throws InterruptedException
+    @Given("JJTD open registration url")
+    public void JjtdOpenRegistrationUrl() throws InterruptedException
     {
         getDriver().get(thomasDorai_XpathLib.registrationUrl);
     }
 
 
-    @Then("I check for valid email address")
-    public void iCheckForValidEmailAddress() throws InterruptedException
+    @Then("JJTD check for valid email address")
+    public void JjtdCheckForValidEmailAddress() throws InterruptedException
     {
         //getDriver().get(joanThomas_XpathLib.registrationUrl);
         getDriver().findElement(By.xpath(thomasDorai_XpathLib.emailField)).click();
@@ -70,8 +70,8 @@ public class thomasDorai_definitions
     }
 
 
-    @Then("I check for invalid email address without top level domain")
-    public void iCheckForInvalidEmailAddressWithoutTopLevelDomain() throws InterruptedException
+    @Then("JJTD check for invalid email address without top level domain")
+    public void JjtdCheckForInvalidEmailAddressWithoutTopLevelDomain() throws InterruptedException
     {
         getDriver().get(thomasDorai_XpathLib.registrationUrl);
         getDriver().findElement(By.xpath(thomasDorai_XpathLib.emailField)).click();
@@ -84,8 +84,8 @@ public class thomasDorai_definitions
     }
 
 
-    @Then("I check if email field is required")
-    public void iCheckIfEmailFieldIsRequired() throws InterruptedException
+    @Then("JJTD check if email field is required")
+    public void JjtdCheckIfEmailFieldIsRequired() throws InterruptedException
     {
         getDriver().get(thomasDorai_XpathLib.registrationUrl);
         getDriver().findElement(By.xpath(thomasDorai_XpathLib.firstNameField)).sendKeys("ABC");
@@ -103,8 +103,8 @@ public class thomasDorai_definitions
         Thread.sleep(5000);
     }
 
-    @Then("I check if whitespaces are allowed in email")
-    public void iCheckIfWhitespacesAreAllowedInEmail() throws InterruptedException
+    @Then("JJTD check if whitespaces are allowed in email")
+    public void JjtdCheckIfWhitespacesAreAllowedInEmail() throws InterruptedException
     {
         getDriver().get(thomasDorai_XpathLib.registrationUrl);
         getDriver().findElement(By.xpath(thomasDorai_XpathLib.emailField)).click();
@@ -116,8 +116,8 @@ public class thomasDorai_definitions
         Thread.sleep(5000);
     }
 
-    @Then("I check if more than maximum characters allowed in Full Email")
-    public void iCheckIfMoreThanMaximumCharactersAllowedInFullEmail() throws InterruptedException
+    @Then("JJTD check if more than maximum characters allowed in Full Email")
+    public void JjtdCheckIfMoreThanMaximumCharactersAllowedInFullEmail() throws InterruptedException
     {
         getDriver().get(thomasDorai_XpathLib.registrationUrl);
         getDriver().findElement(By.xpath(thomasDorai_XpathLib.emailField)).click();
@@ -129,8 +129,8 @@ public class thomasDorai_definitions
     }
 
 
-    @Then("I check if more than Maximum Characters Allowed In Local Part Of Email Address")
-    public void iCheckIfMoreThanMaximumCharactersAllowedInLocalPartOfEmailAddress() throws InterruptedException
+    @Then("JJTD check if more than Maximum Characters Allowed In Local Part Of Email Address")
+    public void JjtdCheckIfMoreThanMaximumCharactersAllowedInLocalPartOfEmailAddress() throws InterruptedException
     {
         getDriver().get(thomasDorai_XpathLib.registrationUrl);
         getDriver().findElement(By.xpath(thomasDorai_XpathLib.emailField)).click();
@@ -142,8 +142,8 @@ public class thomasDorai_definitions
     }
 
 
-    @Then("I check if more than Maximum Characters Allowed In Domain part Of Email Address")
-    public void iCheckIfMoreThanMaximumCharactersAllowedInDomainPartOfEmailAddress() throws InterruptedException
+    @Then("JJTD check if more than Maximum Characters Allowed In Domain part Of Email Address")
+    public void JjtdCheckIfMoreThanMaximumCharactersAllowedInDomainPartOfEmailAddress() throws InterruptedException
     {
         getDriver().get(thomasDorai_XpathLib.registrationUrl);
         getDriver().findElement(By.xpath(thomasDorai_XpathLib.emailField)).click();
@@ -155,8 +155,8 @@ public class thomasDorai_definitions
     }
 
 
-    @Given("I open url and login into Teacher Account")
-    public void iOpenUrlAndLoginIntoTeacherAccount() throws InterruptedException
+    @Given("JJTD open url and login into Teacher Account")
+    public void JjtdOpenUrlAndLoginIntoTeacherAccount() throws InterruptedException
     {
         getDriver().get(thomasDorai_XpathLib.loginUrl);
         getDriver().findElement(By.xpath(thomasDorai_XpathLib.emailField)).sendKeys("joanjen.net@gmail.com");
@@ -168,8 +168,8 @@ public class thomasDorai_definitions
         Thread.sleep(2000);
     }
 
-    @And("I create New Quiz with Textual Question")
-    public void iCreateNewQuizWithTextualQuestion() throws InterruptedException
+    @And("JJTD create New Quiz with Textual Question")
+    public void JjtdCreateNewQuizWithTextualQuestion() throws InterruptedException
     {
         getDriver().findElement(By.xpath(thomasDorai_XpathLib.quizzesMenu)).click();
         Thread.sleep(2000);
@@ -189,8 +189,8 @@ public class thomasDorai_definitions
     }
 
 
-    @Then("I check Textual question points display")
-    public void iCheckTextualQuestionPointsDisplay() throws InterruptedException
+    @Then("JJTD check Textual question points display")
+    public void JjtdCheckTextualQuestionPointsDisplay() throws InterruptedException
     {
         //verify whether '5' points is displayed for Question(default)
         getDriver().findElement(By.xpath("//mat-expansion-panel-header[1][contains(.,'5 Point(s)')]//*[contains(text(),'Q1')]")).isDisplayed();
@@ -198,8 +198,8 @@ public class thomasDorai_definitions
         Thread.sleep(4000);
     }
 
-    @Then("I check if Points can be assigned using Slider button")
-    public void iCheckIfPointsCanBeAssignedUsingSliderButton() throws InterruptedException
+    @Then("JJTD check if Points can be assigned using Slider button")
+    public void JjtdCheckIfPointsCanBeAssignedUsingSliderButton() throws InterruptedException
     {
         getDriver().findElement(By.xpath(thomasDorai_XpathLib.textAreaField)).sendKeys("Define BlackBox Testing");
         Thread.sleep(3000);
@@ -212,8 +212,8 @@ public class thomasDorai_definitions
     }
 
 
-    @Then("I verify if Points increase or decrease if Points per question slider is increased or decreased")
-    public void iVerifyIfPointsIncreaseOrDecreaseIfPointsPerQuestionSliderIsIncreasedOrDecreased() throws InterruptedException
+    @Then("JJTD verify if Points increase or decrease if Points per question slider is increased or decreased")
+    public void JjtdVerifyIfPointsIncreaseOrDecreaseIfPointsPerQuestionSliderIsIncreasedOrDecreased() throws InterruptedException
     {
         //Move slider right to '8' points
         iSetSliderToPointsToRight(8);
@@ -229,5 +229,4 @@ public class thomasDorai_definitions
         getDriver().findElement(By.xpath("//ac-quiz-passing-percentage[1]/mat-card[1]/h5[contains(text(),'2 of 3 Points')]")).isDisplayed();
         Thread.sleep(5000);
     }
-
 }
