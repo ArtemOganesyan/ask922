@@ -179,14 +179,14 @@ public class protsiukDefinitions {
         isClickable(w);
 
         if (actual) {
-            System.out.println("Clickable");
+//            System.out.println("Clickable");
             getDriver().findElement(By.xpath(ProtsiukXpathLib.changingPasswordConfirmationButton_xpathLib)).click();
             sleep(2000);
             new WebDriverWait(getDriver(), 3, 200).until(ExpectedConditions.presenceOfElementLocated(By.xpath(error)));
             sleep(1000);
         }
         else {
-            System.out.println("Unclickable");
+//            System.out.println("Unclickable");
             new  WebDriverWait(getDriver(), 2,200).until(ExpectedConditions.presenceOfElementLocated(By.xpath(error)));
             sleep(1000);
             new Actions(getDriver()).moveToElement(getDriver().findElement(By.xpath(ProtsiukXpathLib.changingPasswordConfirmationCancelButton_xpathLib))).perform();
