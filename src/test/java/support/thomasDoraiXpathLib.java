@@ -1,6 +1,6 @@
 package support;
 
-public class thomasDorai_XpathLib
+public class thomasDoraiXpathLib
 {
     public static String registrationUrl="http://ask-stage.portnov.com/#/registration";
     public static String loginUrl="http://ask-stage.portnov.com/#/login";
