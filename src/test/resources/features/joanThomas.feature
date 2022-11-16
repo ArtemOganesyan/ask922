@@ -1,1 +1,1 @@
-// My feature file
+# My feature file
