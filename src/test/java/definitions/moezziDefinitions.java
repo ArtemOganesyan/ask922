@@ -24,8 +24,8 @@ getDriver().get(arg0);
         getDriver().manage().window().setSize(dimension);
     }
 
-    @Then("^I wait for (\\d+) sec$")
-    public void iWaitForSec(int sec) throws Exception {
+    @Then("^SM wait for (\\d+) sec$")
+    public void smWaitForSec(int sec) throws Exception {
         Thread.sleep(sec * 1000);
     }
 
@@ -87,13 +87,13 @@ getDriver().get(arg0);
         assertThat(getDriver().findElement(By.xpath(xpath)).isSelected()).isFalse();
     }
 
-    @When("^I type \"([^\"]*)\" into element with xpath \"([^\"]*)\"$")
-    public void iTypeIntoElementWithXpath(String text, String xpath) {
+    @When("^SM type \"([^\"]*)\" into element with xpath \"([^\"]*)\"$")
+    public void smTypeIntoElementWithXpath(String text, String xpath) {
         getDriver().findElement(By.xpath(xpath)).sendKeys(text);
     }
 
-    @Then("^I click on element with xpath \"([^\"]*)\"$")
-    public void iClickOnElementWithXpath(String xpath) {
+    @Then("^SM click on element with xpath \"([^\"]*)\"$")
+    public void smClickOnElementWithXpath(String xpath) {
         getDriver().findElement(By.xpath(xpath)).click();
     }
 
@@ -180,8 +180,8 @@ getDriver().get(arg0);
         getDriver().switchTo().alert().dismiss();
     }
 
-    @When("^I clear element with xpath \"([^\"]*)\"$")
-    public void iClearElementWithXpath(String xpath) {
+    @When("^SM clear element with xpath \"([^\"]*)\"$")
+    public void smClearElementWithXpath(String xpath) {
         getDriver().findElement(By.xpath(xpath)).clear();
     }
 
@@ -232,8 +232,8 @@ getDriver().get(arg0);
 
     }
 
-    @Given("I test login")
-    public void iTestLogin() throws InterruptedException {
+    @Given("SM test login")
+    public void smTestLogin() throws InterruptedException {
         getDriver().get("http://ask-stage.portnov.com/");
         getDriver().findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys("abc@yahoo.com");
         getDriver().findElement(By.xpath("//input[@formcontrolname='password']")).sendKeys("111111");
@@ -250,14 +250,14 @@ getDriver().get(arg0);
     }
 
 
-    @Given("I navigate to url")
-    public void iNavigateToUrl() {
+    @Given("SM navigate to url")
+    public void smNavigateToUrl() {
         getDriver().get("http://ask-stage.portnov.com/#/registration");
 
     }
 
-    @And("I fill out all required field")
-    public void iFillOutAllRequiredField() throws InterruptedException {
+    @And("SM fill out all required field")
+    public void smFillOutAllRequiredField() throws InterruptedException {
         getDriver().findElement(By.xpath("//input[@formcontrolname='firstName']")).sendKeys("Red");
         getDriver().findElement(By.xpath("//input[@formcontrolname='lastName']")).sendKeys("Book");
         getDriver().findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys("abcd@gmail.com");
@@ -266,6 +266,11 @@ getDriver().get(arg0);
         getDriver().findElement(By.xpath("//input[@formcontrolname='confirmPassword']")).sendKeys("123456");
         getDriver().findElement(By.xpath("//button[@type='submit']")).click();
         Thread.sleep(5000);
+    }
+
+    @Given("SM open url {string}")
+    public void smOpenUrl(String arg0) {
+        getDriver().get(arg0);
     }
 }
 
