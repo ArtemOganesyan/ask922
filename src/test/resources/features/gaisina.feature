@@ -27,6 +27,7 @@ Feature: GLB Single choice quiz text field
     And GLB click on element with xpath "//span[contains(text(),'Save')]"
     Then GLB wait for 3 sec
     Then GLB wait for element with xpath "//mat-panel-title[contains(text(),'1a/1')]" to be present
+    Then GLB wait for 3 sec
 
   @GLB_test2
   Scenario: GLB 1 Special character in option 1 text field
@@ -44,3 +45,4 @@ Feature: GLB Single choice quiz text field
     And GLB click on element with xpath "//span[contains(text(),'Save')]"
     Then GLB wait for 3 sec
     Then GLB wait for element with xpath "//mat-panel-title[contains(text(),'1a/2')]" to be present
+    Then GLB wait for 3 sec
