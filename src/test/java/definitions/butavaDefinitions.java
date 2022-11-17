@@ -4,12 +4,13 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import support.butavaXpathLib;
 import org.openqa.selenium.WebElement;
 
 
-
-
+import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
 public class butavaDefinitions {
@@ -67,6 +68,8 @@ public class butavaDefinitions {
             case "Create New Quiz":
                 Thread.sleep(3000);
                 getDriver().findElement(By.xpath(butavaXpathLib.newQuizButtonXpath)).click();
+                new WebDriverWait(getDriver(), 10, 200).until(ExpectedConditions.presenceOfElementLocated(By.xpath(butavaXpathLib.myQuizTitleXpath)));
+                Thread.sleep(300);
                 break;
             case "Add Question":
                 getDriver().findElement(By.xpath(butavaXpathLib.addQnXpath)).click();
@@ -80,6 +83,7 @@ public class butavaDefinitions {
                 break;
             case "Preview":
                 getDriver().findElement(By.xpath(butavaXpathLib.previewMyQuizXpath)).click();
+                assertThat(getDriver().findElement(By.xpath((butavaXpathLib.otherTextOptionXpath))).isDisplayed()).isTrue();
                 break;
             default:
                 System.out.println("Check string for buttonToClick");
@@ -91,7 +95,7 @@ public class butavaDefinitions {
     public void svbSetsElement(String elementToSet) throws InterruptedException {
         switch (elementToSet) {
             case "Single-Choice Type":
-                Thread.sleep(5000);
+                Thread.sleep(3000);
                 getDriver().findElement(By.xpath(butavaXpathLib.sChoiceTypeXpath)).click();
             case "Option 1":
                 getDriver().findElement(By.xpath(butavaXpathLib.sChoiceAnswerXpath)).click();
