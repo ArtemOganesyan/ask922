@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+# @ gaisina new feature
+=======
 @ gaisina new feature
 Feature: GLB Single choice quiz text field
   Background:
@@ -41,6 +44,11 @@ Feature: GLB Single choice quiz text field
     And GLB type "1a//" into element with xpath "//textarea[@placeholder='Option 2*']"
     Then GLB click on element with xpath "(//*[contains(text(),'Q1')]/../../..//mat-radio-button)[4]"
     Then GLB wait for 3 sec
+<<<<<<< HEAD
     And GLB click on element with xpath "//span[contains(text(),'Save')]"
     Then GLB wait for 3 sec
     Then GLB wait for element with xpath "//mat-panel-title[contains(text(),'1a/2')]" to be present
+=======
+    And GLB click on element with xpath "//span[contains(text(),'Save’)]"
+>>>>>>> main
+>>>>>>> main

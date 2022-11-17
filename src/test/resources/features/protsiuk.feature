@@ -41,9 +41,9 @@ Feature: VP Test set for Teacher: Setting password
   Scenario: VP try to set try to confirm invalid new password
     Given VP try to set "try to confirm invalid new password"
 
-    #  @protsiuk_scenario_10
-#  Scenario: VP try to set invalid old password_3
-#    Given VP try to set "invalid old password"
+      @protsiuk_scenario_10
+  Scenario: VP try to set invalid old password_3
+    Given VP try to set "invalid old password"
 
 
 
