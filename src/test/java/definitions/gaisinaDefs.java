@@ -32,7 +32,8 @@ public class gaisinaDefs {
     }
 
     @Then("GLB wait for {int} sec")
-    public void glbWaitForSec(int arg0) {
+    public void glbWaitForSec(int arg0) throws InterruptedException {
+        Thread.sleep(3000);
     }
 }
 
