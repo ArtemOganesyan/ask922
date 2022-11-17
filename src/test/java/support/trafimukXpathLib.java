@@ -26,5 +26,15 @@ public class trafimukXpathLib {
     public static String option1FieldTxt = "A";
     public static String option2FieldTxt = "A&1";
     public static String roleLbl = "//div[@class='info']//p";
-//    public static String reqFieldErrorMsg = "(//mat-error[@role='alert'])[1]";
+    public static String listOfQuizzes = "//h4[contains(text(),'List of Quizzes')]";
+    public static String q1Card = "//mat-panel-title[contains(text(),'Q1: new empty question')]";
+    public static String errAtLeastOneCorrectAns = "//div[contains(text(),'*Choose at least one correct answer')]";
+    public static String errReqFieldQ = "(//*[contains(text(),'Q1')]/../../..//*[contains(text(),'This field')])[1]";
+    public static String errReqFieldOpt1 = "(//*[contains(text(),'Q1')]/../../..//*[contains(text(),'This field')])[2]";
+    public static String errReqFieldOpt2 = "(//*[contains(text(),'Q1')]/../../..//*[contains(text(),'This field')])[3]";
+    public static String errQuizNotCompleted = "//simple-snack-bar[contains(text(),'not completed')]";
+    public static String errAuthFailed = "//simple-snack-bar[contains(text(),'failed')]";
+    public static String errInvalidEmail = "//*[contains(text(),'valid email')]";
+    public static String errReqPsw = "//*[contains(text(),'field is required')]";
+    public static String errLength = "";
 }
