@@ -41,9 +41,12 @@ public class MusinaK_Definitions {
     }
 
     @Then("MK navigate to the Teacher comment field and type {string} and Save")
-    public void iNavigateToTheTeacherCommentFieldAndType(String text) {
+    public void iNavigateToTheTeacherCommentFieldAndType(String text) throws InterruptedException {
+        getDriver().findElement(By.xpath(MusinaK_xpathLib.TeacherCommentField)).clear();
         getDriver().findElement(By.xpath(MusinaK_xpathLib.TeacherCommentField)).sendKeys(text);
         getDriver().findElement(By.xpath(MusinaK_xpathLib.saveButtonteacherComment)).click();
+        Thread.sleep(2000);
+
     }
 
     @Then("MK verify that Teacher Comment {string} was saved")
@@ -85,6 +88,8 @@ public class MusinaK_Definitions {
         Thread.sleep(5000);
 
         getDriver().findElement(By.xpath("(//tr)[2]//span[contains(text(), 'Review')]")).click();
+        Thread.sleep(3000);
+        getDriver().findElement(By.xpath(MusinaK_xpathLib.TeacherCommentField)).clear();
         Thread.sleep(3000);
         getDriver().findElement(By.xpath(MusinaK_xpathLib.TeacherCommentField)).sendKeys("abc");
         getDriver().findElement(By.xpath(MusinaK_xpathLib.saveButtonteacherComment)).click();
