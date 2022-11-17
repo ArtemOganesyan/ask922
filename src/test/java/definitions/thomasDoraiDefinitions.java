@@ -6,7 +6,7 @@ import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import support.thomasDorai_XpathLib;
+import support.thomasDoraiXpathLib;
 
 import static support.TestContext.getDriver;
 
@@ -53,7 +53,7 @@ public class thomasDoraiDefinitions
     @Given("JJTD open registration url")
     public void JjtdOpenRegistrationUrl() throws InterruptedException
     {
-        getDriver().get(thomasDorai_XpathLib.registrationUrl);
+        getDriver().get(thomasDoraiXpathLib.registrationUrl);
     }
 
 
@@ -61,11 +61,11 @@ public class thomasDoraiDefinitions
     public void JjtdCheckForValidEmailAddress() throws InterruptedException
     {
         //getDriver().get(joanThomas_XpathLib.registrationUrl);
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.emailField)).click();
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.emailField)).click();
         Thread.sleep(1000);
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.emailField)).sendKeys("abc.123+test@gmail.com");
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.emailField)).sendKeys("abc.123+test@gmail.com");
         Thread.sleep(1000);
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.groupField)).click();
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.groupField)).click();
         Thread.sleep(5000);
     }
 
@@ -73,13 +73,13 @@ public class thomasDoraiDefinitions
     @Then("JJTD check for invalid email address without top level domain")
     public void JjtdCheckForInvalidEmailAddressWithoutTopLevelDomain() throws InterruptedException
     {
-        getDriver().get(thomasDorai_XpathLib.registrationUrl);
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.emailField)).click();
+        getDriver().get(thomasDoraiXpathLib.registrationUrl);
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.emailField)).click();
         Thread.sleep(1000);
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.emailField)).sendKeys("abc123@m");
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.emailField)).sendKeys("abc123@m");
         Thread.sleep(1000);
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.groupField)).click();
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.validEmailError)).isDisplayed();
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.groupField)).click();
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.validEmailError)).isDisplayed();
         Thread.sleep(5000);
     }
 
@@ -87,44 +87,44 @@ public class thomasDoraiDefinitions
     @Then("JJTD check if email field is required")
     public void JjtdCheckIfEmailFieldIsRequired() throws InterruptedException
     {
-        getDriver().get(thomasDorai_XpathLib.registrationUrl);
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.firstNameField)).sendKeys("ABC");
+        getDriver().get(thomasDoraiXpathLib.registrationUrl);
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.firstNameField)).sendKeys("ABC");
         Thread.sleep(1000);
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.lastNameField)).sendKeys("Tester");
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.lastNameField)).sendKeys("Tester");
         Thread.sleep(1000);
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.groupField)).sendKeys("ABC111");
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.groupField)).sendKeys("ABC111");
         Thread.sleep(1000);
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.passwordField)).sendKeys("123abc");
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.passwordField)).sendKeys("123abc");
         Thread.sleep(1000);
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.confirmPasswordField)).sendKeys("123abc");
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.confirmPasswordField)).sendKeys("123abc");
         Thread.sleep(1000);
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.registerButton)).click();
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.requiredFieldError)).isDisplayed();
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.registerButton)).click();
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.requiredFieldError)).isDisplayed();
         Thread.sleep(5000);
     }
 
     @Then("JJTD check if whitespaces are allowed in email")
     public void JjtdCheckIfWhitespacesAreAllowedInEmail() throws InterruptedException
     {
-        getDriver().get(thomasDorai_XpathLib.registrationUrl);
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.emailField)).click();
+        getDriver().get(thomasDoraiXpathLib.registrationUrl);
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.emailField)).click();
         Thread.sleep(1000);
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.emailField)).sendKeys("abc   123@gmail.com");
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.emailField)).sendKeys("abc   123@gmail.com");
         Thread.sleep(1000);
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.groupField)).click();
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.validEmailError)).isDisplayed();
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.groupField)).click();
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.validEmailError)).isDisplayed();
         Thread.sleep(5000);
     }
 
     @Then("JJTD check if more than maximum characters allowed in Full Email")
     public void JjtdCheckIfMoreThanMaximumCharactersAllowedInFullEmail() throws InterruptedException
     {
-        getDriver().get(thomasDorai_XpathLib.registrationUrl);
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.emailField)).click();
+        getDriver().get(thomasDoraiXpathLib.registrationUrl);
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.emailField)).click();
         Thread.sleep(1000);
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.emailField)).sendKeys("aaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbcccccccccccccccccccc@gmail.ccccccccccccccccccccoooooooooooooooommmmmmmmmmmmmmmmmmmmmmmm");
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.emailField)).sendKeys("aaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbcccccccccccccccccccc@gmail.ccccccccccccccccccccoooooooooooooooommmmmmmmmmmmmmmmmmmmmmmm");
         Thread.sleep(1000);
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.groupField)).click();
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.groupField)).click();
         Thread.sleep(5000);
     }
 
@@ -132,12 +132,12 @@ public class thomasDoraiDefinitions
     @Then("JJTD check if more than Maximum Characters Allowed In Local Part Of Email Address")
     public void JjtdCheckIfMoreThanMaximumCharactersAllowedInLocalPartOfEmailAddress() throws InterruptedException
     {
-        getDriver().get(thomasDorai_XpathLib.registrationUrl);
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.emailField)).click();
+        getDriver().get(thomasDoraiXpathLib.registrationUrl);
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.emailField)).click();
         Thread.sleep(1000);
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.emailField)).sendKeys("aaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbcccccccccccccccccccccc@gmail.com");
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.emailField)).sendKeys("aaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbcccccccccccccccccccccc@gmail.com");
         Thread.sleep(1000);
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.groupField)).click();
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.groupField)).click();
         Thread.sleep(5000);
     }
 
@@ -145,12 +145,12 @@ public class thomasDoraiDefinitions
     @Then("JJTD check if more than Maximum Characters Allowed In Domain part Of Email Address")
     public void JjtdCheckIfMoreThanMaximumCharactersAllowedInDomainPartOfEmailAddress() throws InterruptedException
     {
-        getDriver().get(thomasDorai_XpathLib.registrationUrl);
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.emailField)).click();
+        getDriver().get(thomasDoraiXpathLib.registrationUrl);
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.emailField)).click();
         Thread.sleep(1000);
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.emailField)).sendKeys("aaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbccccccccccccccccccccc@gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggm.cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccoom");
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.emailField)).sendKeys("aaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbccccccccccccccccccccc@gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggm.cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccoom");
         Thread.sleep(1000);
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.groupField)).click();
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.groupField)).click();
         Thread.sleep(5000);
     }
 
@@ -158,33 +158,33 @@ public class thomasDoraiDefinitions
     @Given("JJTD open url and login into Teacher Account")
     public void JjtdOpenUrlAndLoginIntoTeacherAccount() throws InterruptedException
     {
-        getDriver().get(thomasDorai_XpathLib.loginUrl);
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.emailField)).sendKeys("joanjen.net@gmail.com");
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.passwordField)).sendKeys("teacher85");
+        getDriver().get(thomasDoraiXpathLib.loginUrl);
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.emailField)).sendKeys("joanjen.net@gmail.com");
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.passwordField)).sendKeys("teacher85");
         Thread.sleep(1000);
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.signInButton)).click();
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.signInButton)).click();
         Thread.sleep(1000);
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.roleTeacher)).isDisplayed();
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.roleTeacher)).isDisplayed();
         Thread.sleep(2000);
     }
 
     @And("JJTD create New Quiz with Textual Question")
     public void JjtdCreateNewQuizWithTextualQuestion() throws InterruptedException
     {
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.quizzesMenu)).click();
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.quizzesMenu)).click();
         Thread.sleep(2000);
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.listOfQuizzes)).isDisplayed();
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.listOfQuizzes)).isDisplayed();
         Thread.sleep(2000);
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.createNewQuizButton)).click();
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.createNewQuizButton)).click();
         Thread.sleep(2000);
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.quizTitleField)).isDisplayed();
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.quizTitleField)).isDisplayed();
         Thread.sleep(1000);
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.quizTitleField)).sendKeys("Testing Types Jo");
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.quizTitleField)).sendKeys("Testing Types Jo");
         Thread.sleep(2000);
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.addQuestionButton)).click();
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.addQuestionButton)).click();
         getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'Q1: new empty question')]")).isDisplayed();
         Thread.sleep(2000);
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.textualRadioButton1)).click();
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.textualRadioButton1)).click();
         Thread.sleep(2000);
     }
 
@@ -201,7 +201,7 @@ public class thomasDoraiDefinitions
     @Then("JJTD check if Points can be assigned using Slider button")
     public void JjtdCheckIfPointsCanBeAssignedUsingSliderButton() throws InterruptedException
     {
-        getDriver().findElement(By.xpath(thomasDorai_XpathLib.textAreaField)).sendKeys("Define BlackBox Testing");
+        getDriver().findElement(By.xpath(thomasDoraiXpathLib.textAreaField)).sendKeys("Define BlackBox Testing");
         Thread.sleep(3000);
         //Move slider to right
         iMoveSliderToRight();

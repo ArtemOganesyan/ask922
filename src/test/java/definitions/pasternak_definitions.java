@@ -17,7 +17,7 @@ public class pasternak_definitions {
         getDriver().get("http://ask-stage.portnov.com");
     }
 
-    @Given("I login to the app")
+    @Given("PVZ login to the app")
     public void iLoginToTheApp() throws InterruptedException {
         getDriver().findElement(By.xpath(pasternak_xpathlib.emailXpath)).sendKeys("thedore@dinomail.ga");
         getDriver().findElement(By.xpath(pasternak_xpathlib.passwordXpath)).sendKeys("Lviv9");
@@ -25,7 +25,7 @@ public class pasternak_definitions {
         Thread.sleep(3000);
     }
 
-    @Then("the user role should be displayed")
+    @Then("PVZ role should be displayed")
     public void theUserRoleShouldBeDisplayed() {
         WebElement roleLabel = getDriver().findElement(By.xpath("//div[@class='info']//p"));
         System.out.println(roleLabel.getText());
@@ -38,25 +38,32 @@ public class pasternak_definitions {
 
     }
 
-    @And("^I wait for element with xpath \"([^\"]*)\" to be present$")
+    @And("^PVZ wait for element with xpath \"([^\"]*)\" to be present$")
     public void iWaitForElementWithXpathToBePresent(String xpath) {
         new WebDriverWait(getDriver(), 10, 200).until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)));
     }
 
-    @Then("^I click on element with xpath \"([^\"]*)\"$")
+    @Then("^PVZ click on element with xpath \"([^\"]*)\"$")
     public void iClickOnElementWithXpath(String xpath) {
         getDriver().findElement(By.xpath(xpath)).click();
     }
 
-    @And("^I type \"([^\"]*)\" into element with xpath \"([^\"]*)\"$")
+    @And("^PVZ type \"([^\"]*)\" into element with xpath \"([^\"]*)\"$")
     public void iTypeIntoElementWithXpath(String text, String xpath) {
         getDriver().findElement(By.xpath(xpath)).sendKeys(text);
     }
 
-    @Then("^I wait for (\\d+) sec$")
+    @Then("^PVZ wait for (\\d+) sec$")
     public void iWaitForSec(int sec) throws Exception{
         Thread.sleep(sec * 1000);
     }
 
+    @Then("PVZ with changed password login to the app")
+    public void pvzLoginToTheAppWithChangedPassword() throws InterruptedException {
+        getDriver().findElement(By.xpath(pasternak_xpathlib.emailXpath)).sendKeys("thedore@dinomail.ga");
+        getDriver().findElement(By.xpath(pasternak_xpathlib.passwordXpath)).sendKeys("Lviv1");
+        getDriver().findElement(By.xpath(pasternak_xpathlib.signInXpath)).click();
+        Thread.sleep(3000);
+    }
 }
 
