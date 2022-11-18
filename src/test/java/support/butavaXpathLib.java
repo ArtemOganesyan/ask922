@@ -12,6 +12,8 @@ public class butavaXpathLib {
     public static String passFieldXpath = "//input[@formcontrolname='password']";
 
     public static String singInButtonXpath = "//*[contains(text(), 'Sign In')]";
+    //public static String roleTrV = "TEACHER";
+    //public static String roleStV = "STUDENT";
 
     public static String menuQuizzesXpath = "//h5[contains(text(),'Quizzes')]";
 
@@ -48,6 +50,7 @@ public class butavaXpathLib {
     public static String findMyQuizXpath = "//mat-panel-title[contains(text(),'sv:quizgit')]";
 
     public static String previewMyQuizXpath = "//mat-panel-title[contains(text(),'sv:quizgit')]/../../..//span[contains(text(), 'Preview')]";
+    public static String otherTextOptionXpath = "//textarea[@placeholder='Other']";
 
 }
 
