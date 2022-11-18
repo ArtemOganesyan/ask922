@@ -1,4 +1,4 @@
-@predefined
+@protsiuk_feature1
 Feature: VP Test set for Teacher: Setting password
 
   @protsiuk_scenario_1

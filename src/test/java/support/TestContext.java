@@ -53,8 +53,8 @@ public class TestContext {
                     chromePreferences.put("credentials_enable_service", false);
                     chromePreferences.put("password_manager_enabled", false);
                     ChromeOptions chromeOptions = new ChromeOptions();
-//                    chromeOptions.addArguments("--start-maximized");
-                    chromeOptions.addArguments("--headless");
+                    chromeOptions.addArguments("--start-maximized");
+//                    chromeOptions.addArguments("--headless");
                     chromeOptions.addArguments("--no-sandbox");
                     chromeOptions.addArguments("--disable-dev-shm-usage");
                     chromeOptions.setExperimentalOption("prefs", chromePreferences);
