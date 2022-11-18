@@ -12,7 +12,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="ask922" target="11" />
-      <module name="java-webdriver-cucumber" target="11" />
+      <module name="java-webdriver-cucumber" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
