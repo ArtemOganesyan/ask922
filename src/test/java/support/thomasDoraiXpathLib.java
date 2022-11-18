@@ -1,6 +1,6 @@
 package support;
 
-public class thomasDorai_XpathLib
+public class thomasDoraiXpathLib
 {
     public static String registrationUrl="http://ask-stage.portnov.com/#/registration";
     public static String loginUrl="http://ask-stage.portnov.com/#/login";
@@ -13,7 +13,9 @@ public class thomasDorai_XpathLib
     public static String confirmPasswordField = "//input[@formcontrolname='confirmPassword']";
     public static String registerButton = "//*[text()='Register Me']";
 
+    //public static String roleStudent = "//*[contains(text(),'STUDENT')]";
     public static String roleStudent = "//div[@class='info']//p";
+    // public static String roleTeacher = "//*[contains(text(),'TEACHER')]";
     public static String roleTeacher = "//div[@class='info']//p";
 
     public static String validEmailError = "//mat-error[contains(text(),'Should be a valid email address')]";
@@ -26,4 +28,10 @@ public class thomasDorai_XpathLib
     public static String addQuestionButton = "//span[contains(.,'Add Question')]";
     public static String textualRadioButton1 = "//*[contains(text(),'Q1')]/../../..//mat-radio-button[1]";
     public static String textAreaField = "//*[contains(text(),'Q1')]/../../..//textarea";
+    //public static String deleteQuestionButton = "//button[contains(.,'Delete Question')]";
+    //public static String confirmationDeleteQuestion = "//mat-dialog-container[1]/ac-modal-confirmation[contains(.,'Confirmation')]";
+    //public static String deleteQuestion1 = "//ac-modal-confirmation[1]/div[2]/button[2]/span[contains(text(),'Delete')]";
+    //public static String deleteQuestion1 = "//ac-modal-confirmation[1]/../../..//span[contains(text(),'Delete')]";
+
+
 }

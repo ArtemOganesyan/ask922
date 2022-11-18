@@ -50,4 +50,4 @@ Feature: NT test set for Multiple Choice Question - Text
     Then NT fill out Option 1 text field
     Then NT fill out Option 2 text field
     Then NT select checkmark box for Option 1
-    And NT save the quiz
+    And NT cannot save the quiz
