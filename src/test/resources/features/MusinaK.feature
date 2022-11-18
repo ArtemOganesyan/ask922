@@ -29,7 +29,9 @@ Feature: MK My test set with step definitions. Submission - reviewed
     Then MK wait for 5 sec
     Then MK verify that Teacher Comment "abc" was saved
 
-  @MK_test_3
+
+@MK_test_5
+  @MK_test_4
   Scenario: MK Verify that reviewed assignments replaced from Automatically Graded to Reviewed and saved
     Then MK go to Submissions - Automatically Graded
     Then MK choose first graded submission and click , add comment save and find this submission on Reviewed page
