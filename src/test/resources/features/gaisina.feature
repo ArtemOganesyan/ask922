@@ -19,6 +19,7 @@ Feature: GLB Single choice quiz text field
     And GLB type "1a/1" into element with xpath "//input[@formcontrolname='name']"
     Then GLB click on element with xpath "//mat-icon[contains(text(),'add_circle')]"
     Then GLB click on element with xpath "//div[contains(text(),'Single-Choice')]"
+    And GLB wait for 3 sec
     Then GLB type "/" into element with xpath "//textarea[@formcontrolname='question']"
     And GLB type "1a/" into element with xpath "//textarea[@placeholder='Option 1*']"
     And GLB type "1a//" into element with xpath "//textarea[@placeholder='Option 2*']"
@@ -37,6 +38,7 @@ Feature: GLB Single choice quiz text field
     Then GLB wait for 3 sec
     Then GLB click on element with xpath "//mat-icon[contains(text(),'add_circle')]"
     Then GLB click on element with xpath "//div[contains(text(),'Single-Choice')]"
+    And GLB wait for 3 sec
     Then GLB type "1a/" into element with xpath "//textarea[@formcontrolname='question']"
     And GLB type "/" into element with xpath "//textarea[@placeholder='Option 1*']"
     And GLB type "1a//" into element with xpath "//textarea[@placeholder='Option 2*']"
