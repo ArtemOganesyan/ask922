@@ -172,18 +172,18 @@ public class adamokovaDefinitions {
             getDriver().findElement((By.xpath(adamokovaXpathLib.changeButton))).click();
             getDriver().findElement(By.xpath(adamokovaXpathLib.warningAlert)).isDisplayed();
             Thread.sleep(3000);
-        } else if (string1.equals("256 characters") && string2.equals("new name")){
+        } else if (string1.equals("32 characters") && string2.equals("new name")){
             getDriver().findElement(By.xpath(adamokovaXpathLib.NewNameField)).clear();
             Thread.sleep(3000);
-            getDriver().findElement(By.xpath(adamokovaXpathLib.NewNameField)).sendKeys("qw rtyuiopasdfghjklzxcvbnmlkoiuhytgfredswqazsxcfdertyuijhgvbjhgfrtyuhgvcdfredsxhjhgtrfdecvhgtrfghjvbqwertyuiopasdfghjklzxcvbnmlkoiuhytgfredswqazsxcfdertyuijhgvbjhgfrtyuhgvcdfredsxhjhgtrfdecvhgtrfghjvbnbvcxzasdfghjkiuytgfredswedcvfgtrfgtyhjuikjhytgfredcvbhg");
+            getDriver().findElement(By.xpath(adamokovaXpathLib.NewNameField)).sendKeys("qwertyuiopqwertyuiopqwertyuiopqw");
             Thread.sleep(3000);
             getDriver().findElement((By.xpath(adamokovaXpathLib.changeButton))).click();
             getDriver().findElement(By.xpath(adamokovaXpathLib.characters)).isDisplayed();
             Thread.sleep(3000);
-        } else if (string1.equals("Alpha 1@>") && string2.equals("new name")) {
+        } else if (string1.equals("Alpha 123") && string2.equals("new name")) {
             getDriver().findElement(By.xpath(adamokovaXpathLib.NewNameField)).clear();
             Thread.sleep(3000);
-            getDriver().findElement(By.xpath(adamokovaXpathLib.NewNameField)).sendKeys("Alpha 1@>");
+            getDriver().findElement(By.xpath(adamokovaXpathLib.NewNameField)).sendKeys("Alpha 123");
             getDriver().findElement((By.xpath(adamokovaXpathLib.changeButton))).click();
             getDriver().findElement(By.xpath(adamokovaXpathLib.alphanumeric)).isDisplayed();
             Thread.sleep(3000);
@@ -200,14 +200,19 @@ public class adamokovaDefinitions {
             getDriver().findElement(By.xpath(adamokovaXpathLib.NewNameField)).sendKeys("A");
             getDriver().findElement((By.xpath(adamokovaXpathLib.changeButton))).click();
             getDriver().findElement(By.xpath(adamokovaXpathLib.warningAlert)).isDisplayed();
-        } else if (string1.equals("Adam") && string2.equals("new name")){
+        } else if (string1.equals("Adamo") && string2.equals("new name")){
             getDriver().findElement(By.xpath(adamokovaXpathLib.NewNameField)).clear();
             Thread.sleep(3000);
-            getDriver().findElement(By.xpath(adamokovaXpathLib.NewNameField)).sendKeys("Adam");
+            getDriver().findElement(By.xpath(adamokovaXpathLib.NewNameField)).sendKeys("Adamo");
+            getDriver().findElement((By.xpath(adamokovaXpathLib.changeButton))).click();
+            getDriver().findElement(By.xpath(adamokovaXpathLib.oneWordName)).isDisplayed();
+        } else if (string1.equals("ФИО") && string2.equals("new name")){
+            getDriver().findElement(By.xpath(adamokovaXpathLib.NewNameField)).sendKeys("ФИО");
             getDriver().findElement((By.xpath(adamokovaXpathLib.changeButton))).click();
             getDriver().findElement(By.xpath(adamokovaXpathLib.warningAlert)).isDisplayed();
 
         }
+
         }
 
 
