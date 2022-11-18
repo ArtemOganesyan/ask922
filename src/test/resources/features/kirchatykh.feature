@@ -35,6 +35,6 @@ Feature: KAV Quiz Title
   Scenario: KAV Quiz Title doesn't accept 1001 characters
     And KAV types in 1000 characters into quiz_title negative
 
-  @kirchatykh_scenario_7
-  Scenario: KAV Quiz Title Leading and trailing space characters to be eliminated
-    And KAV creates quiz_title with leading and trailing spaces as " QWERTY "
+#  @kirchatykh_scenario_7
+#  Scenario: KAV Quiz Title Leading and trailing space characters to be eliminated
+#    And KAV creates quiz_title with leading and trailing spaces as " QWERTY "
