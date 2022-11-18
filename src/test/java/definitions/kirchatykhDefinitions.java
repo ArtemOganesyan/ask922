@@ -79,17 +79,17 @@ public class kirchatykhDefinitions {
         assertThat(getDriver().findElements(By.xpath(kirchatykhXpathLib.lengthError))).hasSize(1);
     }
 
-    @And("KAV creates quiz_title with leading and trailing spaces as {string}")
-    public void iCreateQuizTitleWithLeadingAndTrailingSpacesAs(String title) {
-        getDriver().findElement(By.xpath(kirchatykhXpathLib.quizTitle)).sendKeys(title);
-        getDriver().findElement(By.xpath(kirchatykhXpathLib.role)).click();
-        assertThat(getDriver().findElements(By.xpath(kirchatykhXpathLib.addQuestionButton))).hasSize(1);
-        getDriver().findElement(By.xpath(kirchatykhXpathLib.addQuestionButton)).click();
-        getDriver().findElement(By.xpath(kirchatykhXpathLib.textualChoice)).click();
-        getDriver().findElement(By.xpath(kirchatykhXpathLib.textualQuestion)).sendKeys("Quest ?");
-        getDriver().findElement(By.xpath(kirchatykhXpathLib.questionSaveButton)).click();
-        new WebDriverWait(getDriver(), 10, 200).until(ExpectedConditions.presenceOfElementLocated(By.xpath(kirchatykhXpathLib.createNewQuizButton)));
-        assertThat(getDriver().findElements(By.xpath("//mat-expansion-panel[.//*[contains(text()," + title.strip() + ")]]")).size() > 0);
-    }
+//    @And("KAV creates quiz_title with leading and trailing spaces as {string}")
+//    public void iCreateQuizTitleWithLeadingAndTrailingSpacesAs(String title) {
+//        getDriver().findElement(By.xpath(kirchatykhXpathLib.quizTitle)).sendKeys(title);
+//        getDriver().findElement(By.xpath(kirchatykhXpathLib.role)).click();
+//        assertThat(getDriver().findElements(By.xpath(kirchatykhXpathLib.addQuestionButton))).hasSize(1);
+//        getDriver().findElement(By.xpath(kirchatykhXpathLib.addQuestionButton)).click();
+//        getDriver().findElement(By.xpath(kirchatykhXpathLib.textualChoice)).click();
+//        getDriver().findElement(By.xpath(kirchatykhXpathLib.textualQuestion)).sendKeys("Quest ?");
+//        getDriver().findElement(By.xpath(kirchatykhXpathLib.questionSaveButton)).click();
+//        new WebDriverWait(getDriver(), 10, 200).until(ExpectedConditions.presenceOfElementLocated(By.xpath(kirchatykhXpathLib.createNewQuizButton)));
+//        assertThat(getDriver().findElements(By.xpath("//mat-expansion-panel[.//*[contains(text()," + title.strip() + ")]]")).size() > 0);
+//    }
 }
 
