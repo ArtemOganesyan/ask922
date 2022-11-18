@@ -33,7 +33,7 @@ Feature: KAV Quiz Title
 
   @kirchatykh_scenario_6
   Scenario: KAV Quiz Title doesn't accept 1001 characters
-    And KAV types in 1000 characters into quiz_title negative
+    And KAV types in 1001 characters into quiz_title negative
 
   @kirchatykh_scenario_7
   Scenario: KAV Quiz Title Leading and trailing space characters to be eliminated

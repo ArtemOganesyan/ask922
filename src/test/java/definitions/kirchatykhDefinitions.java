@@ -27,8 +27,6 @@ public class kirchatykhDefinitions {
 
         getDriver().findElement(By.xpath(kirchatykhXpathLib.loginButton)).click();
 
-        sleep(1000);
-
         new WebDriverWait(getDriver(), 10, 200).until(ExpectedConditions.presenceOfElementLocated(By.xpath(kirchatykhXpathLib.quizzesButton)));
         getDriver().findElement(By.xpath(kirchatykhXpathLib.quizzesButton)).click();
 
@@ -52,30 +50,25 @@ public class kirchatykhDefinitions {
         getDriver().findElement(By.xpath(kirchatykhXpathLib.quizTitle)).click();
         getDriver().findElement(By.xpath(kirchatykhXpathLib.role)).click();
         assertThat(getDriver().findElements(By.xpath(kirchatykhXpathLib.thisFieldIsRequired))).hasSize(1);
-        assertThat(getDriver().findElements(By.xpath(kirchatykhXpathLib.addQuestionButton))).hasSize(0);
     }
 
     @And("KAV types in 1000 characters into quiz_title positive")
-    public void iGenerateIntoQuiz_titlePositive() throws InterruptedException {
+    public void iGenerateIntoQuiz_titlePositive() {
         String generator = "q";
         String title = "";
         for (int i =0; i<1000; i++) title += generator;
         getDriver().findElement(By.xpath(kirchatykhXpathLib.quizTitle)).sendKeys(title);
         getDriver().findElement(By.xpath(kirchatykhXpathLib.role)).click();
-        assertThat(getDriver().findElements(By.xpath(kirchatykhXpathLib.addQuestionButton))).hasSize(1);
-        getDriver().findElement(By.xpath(kirchatykhXpathLib.addQuestionButton)).click();
-        assertThat(getDriver().findElements(By.xpath(kirchatykhXpathLib.previewButton))).hasSize(1);
         assertThat(getDriver().findElements(By.xpath(kirchatykhXpathLib.lengthError))).hasSize(0);
     }
 
-    @And("KAV types in 1000 characters into quiz_title negative")
+    @And("KAV types in 1001 characters into quiz_title negative")
     public void iGenerateIntoQuiz_titleNegative() {
         String generator = "q";
         String title = "";
         for (int i =0; i<1001; i++) title += generator;
         getDriver().findElement(By.xpath(kirchatykhXpathLib.quizTitle)).sendKeys(title);
         getDriver().findElement(By.xpath(kirchatykhXpathLib.role)).click();
-        assertThat(getDriver().findElements(By.xpath(kirchatykhXpathLib.addQuestionButton))).hasSize(0);
         assertThat(getDriver().findElements(By.xpath(kirchatykhXpathLib.lengthError))).hasSize(1);
     }
 
@@ -85,11 +78,12 @@ public class kirchatykhDefinitions {
         getDriver().findElement(By.xpath(kirchatykhXpathLib.role)).click();
         assertThat(getDriver().findElements(By.xpath(kirchatykhXpathLib.addQuestionButton))).hasSize(1);
         getDriver().findElement(By.xpath(kirchatykhXpathLib.addQuestionButton)).click();
+        new WebDriverWait(getDriver(), 10, 200).until(ExpectedConditions.presenceOfElementLocated(By.xpath(kirchatykhXpathLib.textualChoice)));
         getDriver().findElement(By.xpath(kirchatykhXpathLib.textualChoice)).click();
+        new WebDriverWait(getDriver(), 10, 200).until(ExpectedConditions.presenceOfElementLocated(By.xpath(kirchatykhXpathLib.textualQuestion)));
         getDriver().findElement(By.xpath(kirchatykhXpathLib.textualQuestion)).sendKeys("Quest ?");
         getDriver().findElement(By.xpath(kirchatykhXpathLib.questionSaveButton)).click();
         new WebDriverWait(getDriver(), 10, 200).until(ExpectedConditions.presenceOfElementLocated(By.xpath(kirchatykhXpathLib.createNewQuizButton)));
-        assertThat(getDriver().findElements(By.xpath("//mat-expansion-panel[.//*[contains(text()," + title.strip() + ")]]")).size() > 0);
+        assertThat(getDriver().findElements(By.xpath("//mat-expansion-panel[.//*[contains(text()," + title.strip() + ")]]")).size() > 0).isTrue();
     }
 }
-
