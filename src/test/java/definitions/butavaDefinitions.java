@@ -33,12 +33,15 @@ public class butavaDefinitions {
                 getDriver().findElement(By.xpath(butavaXpathLib.myQuizTitleXpath)).sendKeys(butavaXpathLib.quizTitle);
                 break;
             case "Question":
+                Thread.sleep(1000);
                 getDriver().findElement(By.xpath(butavaXpathLib.qnXpath)).sendKeys(butavaXpathLib.qn);
                 break;
             case "Option 1":
+                Thread.sleep(1000);
                 getDriver().findElement(By.xpath(butavaXpathLib.optionOneXpath)).sendKeys(butavaXpathLib.optionOneAnswer);
                 break;
             case "Option 2":
+                Thread.sleep(1000);
                 getDriver().findElement(By.xpath(butavaXpathLib.optionTwoXpath)).sendKeys(butavaXpathLib.optionTwoAnswer);
                 break;
             default:
