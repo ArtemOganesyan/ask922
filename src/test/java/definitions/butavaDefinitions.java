@@ -96,7 +96,7 @@ public class butavaDefinitions {
     public void svbSetsElement(String elementToSet) throws InterruptedException {
         switch (elementToSet) {
             case "Single-Choice Type":
-                Thread.sleep(3000);
+                Thread.sleep(5000);
                 getDriver().findElement(By.xpath(butavaXpathLib.sChoiceTypeXpath)).click();
             case "Option 1":
                 getDriver().findElement(By.xpath(butavaXpathLib.sChoiceAnswerXpath)).click();
