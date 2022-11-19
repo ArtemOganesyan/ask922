@@ -69,9 +69,10 @@ public class butavaDefinitions {
                 Thread.sleep(3000);
                 getDriver().findElement(By.xpath(butavaXpathLib.newQuizButtonXpath)).click();
                 new WebDriverWait(getDriver(), 10, 200).until(ExpectedConditions.presenceOfElementLocated(By.xpath(butavaXpathLib.myQuizTitleXpath)));
-                Thread.sleep(300);
+                Thread.sleep(1000);
                 break;
             case "Add Question":
+                Thread.sleep(1000);
                 getDriver().findElement(By.xpath(butavaXpathLib.addQnXpath)).click();
                 break;
             case "Save":
