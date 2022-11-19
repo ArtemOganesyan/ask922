@@ -1,7 +1,7 @@
 @stanfeature
 Feature:
 
-  @stanfiture1
+  @stanfeature1
   Scenario: Student: "My Assignments" button redirect to "My Assignments"
     Given I open ask url
     Then I type "Email" into text field element
