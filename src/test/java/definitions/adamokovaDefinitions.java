@@ -172,10 +172,10 @@ public class adamokovaDefinitions {
             getDriver().findElement((By.xpath(adamokovaXpathLib.changeButton))).click();
             getDriver().findElement(By.xpath(adamokovaXpathLib.warningAlert)).isDisplayed();
             Thread.sleep(3000);
-        } else if (string1.equals("32 characters") && string2.equals("new name")){
+        } else if (string1.equals("256 characters") && string2.equals("new name")){
             getDriver().findElement(By.xpath(adamokovaXpathLib.NewNameField)).clear();
             Thread.sleep(3000);
-            getDriver().findElement(By.xpath(adamokovaXpathLib.NewNameField)).sendKeys("qwertyuiopqwertyuiopqwertyuiopqw");
+            getDriver().findElement(By.xpath(adamokovaXpathLib.NewNameField)).sendKeys("qwertyuiopqwertyuiopqwertyuiopqwqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq");
             Thread.sleep(3000);
             getDriver().findElement((By.xpath(adamokovaXpathLib.changeButton))).click();
             getDriver().findElement(By.xpath(adamokovaXpathLib.characters)).isDisplayed();
@@ -185,7 +185,7 @@ public class adamokovaDefinitions {
             Thread.sleep(3000);
             getDriver().findElement(By.xpath(adamokovaXpathLib.NewNameField)).sendKeys("Alpha 123");
             getDriver().findElement((By.xpath(adamokovaXpathLib.changeButton))).click();
-            getDriver().findElement(By.xpath(adamokovaXpathLib.alphanumeric)).isDisplayed();
+            getDriver().findElement(By.xpath(adamokovaXpathLib.warningAlert)).isDisplayed();
             Thread.sleep(3000);
         } else if (string1.equals("256 characters and 1 space") && string2.equals("new name")) {
             getDriver().findElement(By.xpath(adamokovaXpathLib.NewNameField)).clear();
