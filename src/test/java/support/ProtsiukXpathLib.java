@@ -13,8 +13,8 @@ public class ProtsiukXpathLib {
     public static String changingPasswordPasswordField_xpathLib = "//input[@formcontrolname='password']";
     public static String changingPasswordNewPasswordField_xpathLib = "//input[@formcontrolname='newPassword']";
     public static String changingPasswordConfirmNewPasswordField_xpathLib = "//input[@formcontrolname='confirmPassword']";
-    public static String changingPasswordConfirmationButton_xpathLib = "//span[text() = 'Change']";
-    public static String changingPasswordConfirmationCancelButton_xpathLib = "//span[text() = 'Cancel']";
+    public static String changingPasswordConfirmationButton_xpathLib = "//button[@aria-label = 'Close dialog'] [.//span[text() = 'Change']]";
+    public static String changingPasswordConfirmationCancelButton_xpathLib = "//button[@aria-label = 'Close dialog'] [.//span[text() = 'Cancel']]";
     public static String whitespacesAreNotAllowed = "///mat-error[contains(text(), 'Whitespace')]";
 
 

@@ -7,7 +7,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import support.ProtsiukCredentials;
 import support.ProtsiukXpathLib;
-import support.thomasDorai_XpathLib;
 
 import static java.lang.Thread.sleep;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -174,12 +173,26 @@ public class protsiukDefinitions {
         getDriver().findElement(By.xpath(ProtsiukXpathLib.changingPasswordPasswordField_xpathLib)).click();
         sleep(1000);
 
-        new  WebDriverWait(getDriver(), 2,200).until(ExpectedConditions.presenceOfElementLocated(By.xpath(error)));
-        sleep(1000);
-        new Actions(getDriver()).moveToElement(getDriver().findElement(By.xpath(ProtsiukXpathLib.changingPasswordConfirmationCancelButton_xpathLib))).perform();
-        sleep(1000);
-        getDriver().findElement(By.xpath(ProtsiukXpathLib.changingPasswordConfirmationCancelButton_xpathLib)).click();
-        sleep(1000);
+        WebElement w = getDriver().findElement(By.xpath(ProtsiukXpathLib.changingPasswordConfirmationButton_xpathLib));
+        boolean actual = w.isEnabled();
+        isClickable(w);
+
+        if (actual) {
+            System.out.println("Clickable");
+            getDriver().findElement(By.xpath(ProtsiukXpathLib.changingPasswordConfirmationButton_xpathLib)).click();
+            sleep(2000);
+            new WebDriverWait(getDriver(), 3, 200).until(ExpectedConditions.presenceOfElementLocated(By.xpath(error)));
+            sleep(1000);
+        }
+        else {
+            System.out.println("Unclickable");
+            new  WebDriverWait(getDriver(), 2,200).until(ExpectedConditions.presenceOfElementLocated(By.xpath(error)));
+            sleep(1000);
+            new Actions(getDriver()).moveToElement(getDriver().findElement(By.xpath(ProtsiukXpathLib.changingPasswordConfirmationCancelButton_xpathLib))).perform();
+            sleep(1000);
+            getDriver().findElement(By.xpath(ProtsiukXpathLib.changingPasswordConfirmationCancelButton_xpathLib)).click();
+            sleep(1000);
+        }
         logOut();
     }
 
