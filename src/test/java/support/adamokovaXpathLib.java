@@ -25,7 +25,7 @@ public class adamokovaXpathLib {
     public static String Pat_Kinger = "//td[contains(text(),'Pat Kinger')]";
     public static String warningAlert = "//mat-error[@role='alert']";
     public static String warNameFieldIsReq = "//mat-error[@id='mat-error-3']";
-    public static String characters = "//td[contains(text(),'qwertyuiopqwertyuiopqwertyuiopqw')]";
+    public static String characters = "//td[contains(text(),'qwertyuiopqwertyuiopqwertyuiopqwqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq')]";
     public static String alphanumeric = "//td[contains(text(),'Alpha 123')]";
     public static String oneWordName = "//td[contains(text(),'Adamo')]";
 
