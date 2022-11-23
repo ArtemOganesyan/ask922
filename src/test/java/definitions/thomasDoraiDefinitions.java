@@ -6,6 +6,8 @@ import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import support.thomasDoraiXpathLib;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -238,8 +240,11 @@ public class thomasDoraiDefinitions
         Thread.sleep(2000);
         assertThat(getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'Q1: new empty question')]")).isDisplayed()).isTrue();
         getDriver().findElement(By.xpath(thomasDoraiXpathLib.textualRadioButton1)).click();
-        Thread.sleep(2000);
-        getDriver().findElement(By.xpath(thomasDoraiXpathLib.textAreaField)).sendKeys("Define BlackBox Testing");
+//        Thread.sleep(2000);
+//        WebDriverWait wait = new WebDriverWait(getDriver(), 50);
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(thomasDoraiXpathLib.textAreaField)));
+//        getDriver().findElement(By.xpath(thomasDoraiXpathLib.textAreaField)).click();
+//        getDriver().findElement(By.xpath(thomasDoraiXpathLib.textAreaField)).sendKeys("Define BlackBox Testing");
         Thread.sleep(3000);
     }
 

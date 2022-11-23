@@ -28,6 +28,7 @@ public class thomasDoraiXpathLib
     public static String addQuestionButton = "//span[contains(.,'Add Question')]";
     public static String textualRadioButton1 = "//*[contains(text(),'Q1')]/../../..//mat-radio-button[1]";
     public static String textAreaField = "//*[contains(text(),'Q1')]/../../..//textarea";
+    //public static String textAreaField = "//*[contains(text(),'Q1')]/../../..//textarea[@formcontrolname='question']";
     //public static String deleteQuestionButton = "//button[contains(.,'Delete Question')]";
     //public static String confirmationDeleteQuestion = "//mat-dialog-container[1]/ac-modal-confirmation[contains(.,'Confirmation')]";
     //public static String deleteQuestion1 = "//ac-modal-confirmation[1]/div[2]/button[2]/span[contains(text(),'Delete')]";
